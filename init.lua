@@ -196,6 +196,7 @@ require('lazy').setup({
 vim.o.hlsearch = false
 
 -- Make line numbers default
+vim.wo.relativenumber = true
 vim.wo.number = true
 
 -- Enable mouse mode
@@ -220,7 +221,7 @@ vim.o.smartcase = true
 vim.wo.signcolumn = 'yes'
 
 -- Decrease update time
-vim.o.updatetime = 250
+vim.o.updatetime = 50
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
@@ -229,6 +230,19 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Line wrapping
+vim.o.wrap = false
+
+-- Backspace
+vim.o.backspace = "indent,eol,start"
+
+-- Split windows
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+-- Scroll thingy
+vim.o.scrolloff = 8
 
 -- [[ Basic Keymaps ]]
 
@@ -261,6 +275,11 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
+    file_ignore_patterns = {
+      "node_modules",
+      "build",
+      "dist",
+    }
   },
 }
 
