@@ -303,6 +303,18 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
+-- nvim-tree.lua remaps
+
+local function open_nvim_tree()
+  require('nvim-tree.api').tree.open()
+end
+
+require("nvim-tree.api").tree.toggle({ find_file = true, focus = false })
+vim.keymap.set('n', '<leader>nf', ':NvimTreeFocus<cr>', { desc = '[N]vimTree [F]ocus' })
+vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<cr>', { desc = '[N]vimTree [T]oggle' })
+vim.keymap.set('n', '<leader>ns', ':NvimTreeFindFile<cr>', { desc = '[N]vimTree [S]earch_file' })
+vim.api.nvim_create_autocmd({'VimEnter'}, { callback = open_nvim_tree })
+
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
@@ -372,7 +384,7 @@ require('nvim-treesitter.configs').setup {
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>E', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- LSP settings.
