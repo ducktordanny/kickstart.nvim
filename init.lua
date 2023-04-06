@@ -303,7 +303,7 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
--- nvim-tree.lua remaps
+-- nvim-tree.lua remaps and other stuff
 
 local function open_nvim_tree()
   require('nvim-tree.api').tree.open()
@@ -314,6 +314,12 @@ vim.keymap.set('n', '<leader>nf', ':NvimTreeFocus<cr>', { desc = '[N]vimTree [F]
 vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<cr>', { desc = '[N]vimTree [T]oggle' })
 vim.keymap.set('n', '<leader>ns', ':NvimTreeFindFile<cr>', { desc = '[N]vimTree [S]earch_file' })
 vim.api.nvim_create_autocmd({'VimEnter'}, { callback = open_nvim_tree })
+
+-- bufferline.lua remaps and other config
+
+vim.keymap.set('n', '<leader>bc', ':BufferLinePickClose<cr>', { desc = '[B]ufferLine Pick_[C]lose' })
+vim.keymap.set('n', '<leader>bn', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
+vim.keymap.set('n', '<leader>bp', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
