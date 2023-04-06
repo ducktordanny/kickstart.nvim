@@ -313,6 +313,8 @@ require("nvim-tree.api").tree.toggle({ find_file = true, focus = false })
 vim.keymap.set('n', '<leader>nf', ':NvimTreeFocus<cr>', { desc = '[N]vimTree [F]ocus' })
 vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<cr>', { desc = '[N]vimTree [T]oggle' })
 vim.keymap.set('n', '<leader>ns', ':NvimTreeFindFile<cr>', { desc = '[N]vimTree [S]earch_file' })
+vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<cr>', { desc = '[N]vimTree [R]efresh' })
+vim.keymap.set('n', '<leader>nw', ':NvimTreeResize', { desc = '[N]vimTree Resize [W]idth' })
 vim.api.nvim_create_autocmd({'VimEnter'}, { callback = open_nvim_tree })
 
 -- bufferline.lua remaps and other config
