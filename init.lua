@@ -313,7 +313,7 @@ local function open_nvim_tree()
 end
 
 require("nvim-tree.api").tree.toggle({ find_file = true, focus = false })
-vim.keymap.set('n', '<leader>n', ':NvimTreeFocus<cr>', { desc = '[N]vimTree Focus' })
+vim.keymap.set('n', 'F', ':NvimTreeFocus<cr>', { desc = 'NvimTree [F]ocus' })
 vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<cr>', { desc = '[N]vimTree [T]oggle' })
 vim.keymap.set('n', '<leader>ns', ':NvimTreeFindFile<cr>', { desc = '[N]vimTree [S]earch_file' })
 vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<cr>', { desc = '[N]vimTree [R]efresh' })
