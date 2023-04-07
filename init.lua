@@ -220,6 +220,9 @@ vim.o.smartcase = true
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
+-- incsearch recommended setting by vgit
+vim.o.incsearch = false
+
 -- Decrease update time
 vim.o.updatetime = 50
 vim.o.timeout = true
@@ -310,18 +313,17 @@ local function open_nvim_tree()
 end
 
 require("nvim-tree.api").tree.toggle({ find_file = true, focus = false })
-vim.keymap.set('n', '<leader>nf', ':NvimTreeFocus<cr>', { desc = '[N]vimTree [F]ocus' })
+vim.keymap.set('n', '<leader>n', ':NvimTreeFocus<cr>', { desc = '[N]vimTree Focus' })
 vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<cr>', { desc = '[N]vimTree [T]oggle' })
 vim.keymap.set('n', '<leader>ns', ':NvimTreeFindFile<cr>', { desc = '[N]vimTree [S]earch_file' })
 vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<cr>', { desc = '[N]vimTree [R]efresh' })
-vim.keymap.set('n', '<leader>nw', ':NvimTreeResize', { desc = '[N]vimTree Resize [W]idth' })
 vim.api.nvim_create_autocmd({'VimEnter'}, { callback = open_nvim_tree })
 
 -- bufferline.lua remaps and other config
 
 vim.keymap.set('n', '<leader>bc', ':BufferLinePickClose<cr>', { desc = '[B]ufferLine Pick_[C]lose' })
-vim.keymap.set('n', '<leader>bn', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
-vim.keymap.set('n', '<leader>bp', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
+vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
+vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
