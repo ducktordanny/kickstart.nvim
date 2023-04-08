@@ -172,8 +172,7 @@ require('lazy').setup({
     end,
   },
 
-  -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
-  --       These are some example plugins that I've included in the kickstart repository.
+  -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
   -- require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
@@ -324,6 +323,11 @@ vim.api.nvim_create_autocmd({'VimEnter'}, { callback = open_nvim_tree })
 vim.keymap.set('n', '<leader>bc', ':BufferLinePickClose<cr>', { desc = '[B]ufferLine Pick_[C]lose' })
 vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
 vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
+vim.keymap.set('n', '<leader>c', ':bd<cr>', { desc = '[C]lose Buffer' })
+
+-- git and vgit remaps
+
+vim.keymap.set('n', '<leader>gl', ':Git log --decorate --graph<cr>', { desc = '[G]it [L]og' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`

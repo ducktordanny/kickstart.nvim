@@ -4,6 +4,6 @@ return {
     'nvim-telescope/telescope.nvim',
   },
   config = function()
-    require("nx").setup {}
+    require('nx').setup {}
   end
 }

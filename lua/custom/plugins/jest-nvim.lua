@@ -1,4 +1,4 @@
 return {
   'mattkubej/jest.nvim',
-  version = "*"
+  version = '*'
 }
