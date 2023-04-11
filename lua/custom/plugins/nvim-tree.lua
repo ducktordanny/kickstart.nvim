@@ -12,6 +12,9 @@ return {
       git = {
         ignore = false,
       },
+      view = {
+        width = 45,
+      },
     }
   end,
 }
