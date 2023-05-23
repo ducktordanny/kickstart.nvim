@@ -363,6 +363,7 @@ vim.keymap.set('n', '<leader>ga', ':Git add --all<cr>', { desc = '[G]it add [a]l
 vim.keymap.set('n', '<leader>gc', ':Git commit -m ""', { desc = '[G]it [C]ommit' })
 vim.keymap.set('n', '<leader>gs', ':Git status<cr>', { desc = '[G]it [S]tatus' })
 vim.keymap.set('n', '<leader>gp', ':Git push', { desc = '[G]it [P]ush' })
+vim.keymap.set('n', '<leader>gf', ':Git fetch', { desc = '[G]it [F]etch' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
