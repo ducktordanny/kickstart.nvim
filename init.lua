@@ -330,6 +330,10 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
+-- undotree stuff
+
+vim.keymap.set('n', '<leader>u', ':UndotreeToggle<cr>', {desc = '[U]ndotree'})
+
 -- nvim-tree.lua remaps and other stuff
 
 local function open_nvim_tree()
@@ -346,6 +350,7 @@ vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
 -- bufferline.lua remaps and other config
 
 vim.keymap.set('n', '<leader>bc', ':BufferLinePickClose<cr>', { desc = '[B]ufferLine Pick_[C]lose' })
+vim.keymap.set('n', '<leader>bo', ':BufferLinePick<cr>', { desc = '[B]ufferLine Pick for [O]pen' })
 vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
 vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
 vim.keymap.set('n', '<leader>c', ':bd<cr>', { desc = '[C]lose Buffer' })
@@ -354,6 +359,10 @@ vim.keymap.set('n', '<leader>c', ':bd<cr>', { desc = '[C]lose Buffer' })
 
 vim.keymap.set('n', '<leader>gl', ':Git log --decorate --graph<cr>', { desc = '[G]it [L]og' })
 vim.keymap.set('n', '<leader>gr', ':Gitsigns refresh<cr>', { desc = '[G]itsigns [R]efresh' })
+vim.keymap.set('n', '<leader>ga', ':Git add --all<cr>', { desc = '[G]it add [a]ll' })
+vim.keymap.set('n', '<leader>gc', ':Git commit -m ""', { desc = '[G]it [C]ommit' })
+vim.keymap.set('n', '<leader>gs', ':Git status<cr>', { desc = '[G]it [S]tatus' })
+vim.keymap.set('n', '<leader>gp', ':Git push', { desc = '[G]it [P]ush' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
