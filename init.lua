@@ -114,16 +114,6 @@ require('lazy').setup({
     },
   },
 
-  -- { -- Theme by nightfly
-  --   "bluz71/vim-nightfly-colors",
-  --   name = "nightfly",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme('nightfly')
-  --   end,
-  -- },
-
   { -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
