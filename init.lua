@@ -231,6 +231,9 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Vertical line for character limit in a line
+vim.o.colorcolumn = "80"
+
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
